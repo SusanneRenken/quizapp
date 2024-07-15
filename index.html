@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quizzapp</title>
+    <title>Quizapp</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
 
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style/fonts.css" />
     <link rel="stylesheet" href="./style/standard.css" />
-    <link rel="stylesheet" href="./style/assets.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <script src="./scripts/assets.js"></script>
     <script src="./scripts/templates.js"></script>
@@ -29,7 +28,7 @@
     ></script>
   </head>
 
-  <body onload="render()">
+  <body onload="init()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Meine Quizapp</span>
@@ -45,26 +44,26 @@
           alt="Bild"
         />
         <div class="card-body">
-          <h5 class="card-title">Frage</h5>
+          <h5 class="card-title" id="question_text">Frage</h5>
 
-          <div class="card mb-2">
-            <div class="card-body">Antwort</div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+            <div class="card-body" id="answer_1">Antwort</div>
           </div>
 
-          <div class="card mb-2">
-            <div class="card-body">Antwort</div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+            <div class="card-body" id="answer_2">Antwort</div>
           </div>
 
-          <div class="card mb-2">
-            <div class="card-body">Antwort</div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+            <div class="card-body" id="answer_3">Antwort</div>
           </div>
 
-          <div class="card mb-2">
-            <div class="card-body">Antwort</div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+            <div class="card-body" id="answer_4">Antwort</div>
           </div>
 
           <div class="question-footer">
-            <span><b>1</b> von <b>2</b> Fragen</span>
+            <span><b>1</b> von <b id="all_questions">2</b> Fragen</span>
             <button type="button" class="btn btn-outline-success">Nächste Frage</button>
           </div>
         </div>
