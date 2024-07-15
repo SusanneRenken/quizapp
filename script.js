@@ -1,4 +1,5 @@
 let currentQuestion = 0;
+let allRightAnswer = 0;
 
 function init() {
   document.getElementById("all_questions").innerHTML = questions.length;
@@ -6,12 +7,21 @@ function init() {
 }
 
 function showQuestion() {
-  let question = questions[currentQuestion];
-  document.getElementById("question_text").innerHTML = question["question"];
-  for (let i = 1; i < 5; i++) {
-    document.getElementById(`answer_${i}`).innerHTML = question[`answer_${i}`];
+  if (currentQuestion >= questions.length) {
+    document.getElementById("question_card").classList.add("d-none");
+    document.getElementById("end_card").classList.remove("d-none");
+    document.getElementById("head_picture").src = "./assets/img/flags.png";
+    document.getElementById("right_answers").innerHTML = allRightAnswer;
+    document.getElementById("all_answers").innerHTML = questions.length;
+  } else {
+    let question = questions[currentQuestion];
+    document.getElementById("question_text").innerHTML = question["question"];
+    for (let i = 1; i < 5; i++) {
+      document.getElementById(`answer_${i}`).innerHTML =
+        question[`answer_${i}`];
+    }
+    document.getElementById("current-question").innerHTML = currentQuestion + 1;
   }
-  document.getElementById("current-question").innerHTML = currentQuestion + 1;
 }
 
 function answer(selection) {
@@ -22,6 +32,7 @@ function answer(selection) {
     document
       .getElementById(selection)
       .parentNode.classList.add("bg-success-subtle");
+    allRightAnswer++;
   } else {
     document
       .getElementById(selection)
@@ -42,5 +53,5 @@ function nextQuestion() {
 
   document.getElementById("next_button").disabled = true;
   currentQuestion++;
-  init();
+  showQuestion();
 }
