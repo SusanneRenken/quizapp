@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style/fonts.css" />
     <link rel="stylesheet" href="./style/standard.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <script src="./scripts/assets.js"></script>
     <script src="./scripts/templates.js"></script>
@@ -63,8 +64,8 @@
           </div>
 
           <div class="question-footer">
-            <span><b>1</b> von <b id="all_questions">2</b> Fragen</span>
-            <button type="button" class="btn btn-outline-success">Nächste Frage</button>
+            <span><b id="current-question">1</b> von <b id="all_questions">2</b> Fragen</span>
+            <button type="button" class="btn btn-outline-success" id="next_button" onclick="nextQuestion()" disabled>Nächste Frage</button>
           </div>
         </div>
       </div>
