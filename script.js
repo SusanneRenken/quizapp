@@ -30,6 +30,10 @@ function answer(selection) {
   let question = questions[currentQuestion];
   let rightAnswer = `answer_${question[`right_answer`]}`;
 
+  for (let i = 1; i < 5; i++) {
+    document.getElementById(`answer_card_${i}`).onclick = null;
+  }
+
   if (rightAnswer == selection) {
     document
       .getElementById(selection)
@@ -51,6 +55,7 @@ function nextQuestion() {
     let answerContainer = document.getElementById(`answer_${i}`);
     answerContainer.parentNode.classList.remove("bg-danger-subtle");
     answerContainer.parentNode.classList.remove("bg-success-subtle");
+    document.getElementById(`answer_card_${i}`).onclick = function() { answer(`answer_${i}`); };
   }
 
   document.getElementById("next_button").disabled = true;
