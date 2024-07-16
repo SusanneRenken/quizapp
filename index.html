@@ -47,6 +47,17 @@
           alt="Bild"
           id="head_picture"
         />
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Success striped example"
+        >
+          <div
+            class="progress-bar progress-bar-striped bg-success"
+            style="width: 25%"
+            id="progress_bar"
+          ></div>
+        </div>
 
         <div class="card-body end-card d-none" id="end_card">
           <span
@@ -54,6 +65,14 @@
             <b id="all_answers"></b> Fragen richtig beantwortet</span
           >
           <p>Herzlichen Glückwunsch!</p>
+          <button
+            type="button"
+            class="btn btn-outline-success"
+            id="new_game_button"
+            onclick="newGame()"
+          >
+            Erneut spielen
+          </button>
         </div>
 
         <div class="card-body" id="question_card">

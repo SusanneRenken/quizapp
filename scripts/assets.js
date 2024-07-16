@@ -65,30 +65,6 @@ let questions = [
   //     "right_answer": 3
   // },
   // {   
-  //     "question": "Welches HTML-Tag wird verwendet, um ein Bild einzufügen?",
-  //     "answer_1": "<img>",
-  //     "answer_2": "<picture>",
-  //     "answer_3": "<image>",
-  //     "answer_4": "<src>",
-  //     "right_answer": 1
-  // },
-  // {   
-  //     "question": "Wie erstellt man einen Link in HTML?",
-  //     "answer_1": "<a link='url'>Link</a>",
-  //     "answer_2": "<a href='url'>Link</a>",
-  //     "answer_3": "<link href='url'>Link</link>",
-  //     "answer_4": "<url link='url'>Link</url>",
-  //     "right_answer": 2
-  // },
-  // {   
-  //     "question": "Welches Tag wird verwendet, um eine geordnete Liste zu erstellen?",
-  //     "answer_1": "<ul>",
-  //     "answer_2": "<ol>",
-  //     "answer_3": "<li>",
-  //     "answer_4": "<dl>",
-  //     "right_answer": 2
-  // },
-  // {   
   //     "question": "Wofür steht CSS?",
   //     "answer_1": "Cascading Style Sheets",
   //     "answer_2": "Computer Style Sheets",

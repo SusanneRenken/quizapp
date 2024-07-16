@@ -22,6 +22,8 @@ function showQuestion() {
     }
     document.getElementById("current-question").innerHTML = currentQuestion + 1;
   }
+  let percent = (currentQuestion / questions.length) * 100;
+  document.getElementById("progress_bar").style.width = `${percent}%`;
 }
 
 function answer(selection) {
@@ -53,5 +55,15 @@ function nextQuestion() {
 
   document.getElementById("next_button").disabled = true;
   currentQuestion++;
+  showQuestion();
+}
+
+function newGame() {
+  currentQuestion = 0;
+  allRightAnswer = 0;
+  document.getElementById("question_card").classList.remove("d-none");
+  document.getElementById("end_card").classList.add("d-none");
+  document.getElementById("head_picture").src =
+    "./assets/img/question-mark.jpg";
   showQuestion();
 }
